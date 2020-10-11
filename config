@@ -1,0 +1,8 @@
+export FORUM_DB_URL=jdbc:h2:mem:guilherme-forum
+export FORUM_DB_USERNAME=sa
+export FORUM_DB_PASSWORD=
+export FORUM_DB_SECRET=123456
+
+-Dspring.profiles.active=dev
+
+docker run -p 8080:8080 -e SPRING_PROFILES_ACTIVE='prod' -e FORUM_DB_URL='jdbc:h2:mem:guilherme-forum' -e FORUM_DB_USERNAME='sa' -e FORUM_DB_PASSWORD='' -e FORUM_DB_SECRET='123456' guilherme/forum
